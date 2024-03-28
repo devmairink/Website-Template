@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-color: var(--color-background);
+            display: flex;
+            justify-content: center;
+            align-items: center; 
+            height: 100vh; 
+            margin: 0; 
+            position: relative;
+        }
+
+        .login-form {
+            max-width: 300px;
+            padding: 20px;
+            background-color: var(--color-white);
+            box-shadow: var(--box-shadow);
+            border-radius: var(--card-border-radius);
+            text-align: center;
+        }
+
+        .login-form label {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--color-dark-variant);
+        }
+
+        .login-form input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 16px;
+            border: 1px solid var(--color-light);
+            border-radius: var(--border-radius-1);
+            box-sizing: border-box;
+        }
+
+        .login-form button {
+            width: 100%;
+            padding: 12px;
+            background-color: var(--color-primary);
+            color: var(--color-white);
+            border: none;
+            border-radius: var(--border-radius-1);
+            cursor: pointer;
+        }
+
+        .login-form p {
+            margin-top: 16px;
+            font-size: 14px;
+            color: var(--color-dark-variant);
+        }
+
+        .login-form a {
+            color: var(--color-primary);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .right-section {
+            position: absolute; /*Confirmar que o botão do tema vai ficar na direita em cima rs*/
+            top: 20px;
+            right: 20px; 
+        }
+    </style>
+    <title>Login</title>
+</head>
+<body>
+
+<div class="login-form">
+    <h2>Login</h2>
+    <form id="login-form">
+        <label for="username">Email:</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="password">Senha:</label>
+        <input type="password" id="password" name="password" required>
+
+        <button type="submit">Entrar</button>
+    </form>
+    <p>Não tem uma conta? <a href="register.html" style="color: white;">Registre-se</a></p>
+    <p><a href="forgot-password.html" style="color: white;">Esqueci Minha Senha</a></p>
+</div>
+
+<div class="right-section">
+    <div class="nav">
+        <button id="menu-btn">
+            <span class="material-icons-sharp">
+                menu
+            </span>
+        </button>
+        <div class="dark-mode">
+            <span class="material-icons-sharp active">
+                light_mode
+            </span>
+            <span class="material-icons-sharp">
+                dark_mode
+            </span>
+        </div>
+    </div>
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+<script src="backend/login.js"></script>
+<script src="backend/index.js"></script>
+</body>
+</html>

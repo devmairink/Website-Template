@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-color: var(--color-background);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; 
+            margin: 0;
+            position: relative; 
+        }
+
+        .register-form {
+            max-width: 300px;
+            padding: 20px;
+            background-color: var(--color-white);
+            box-shadow: var(--box-shadow);
+            border-radius: var(--card-border-radius);
+            text-align: center;
+        }
+
+        .register-form label {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--color-dark-variant);
+        }
+
+        .register-form input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 16px;
+            border: 1px solid var(--color-light);
+            border-radius: var(--border-radius-1);
+            box-sizing: border-box;
+        }
+
+        .register-form button {
+            width: 100%;
+            padding: 12px;
+            background-color: var(--color-primary);
+            color: var(--color-white);
+            border: none;
+            border-radius: var(--border-radius-1);
+            cursor: pointer;
+        }
+
+        .register-form p {
+            margin-top: 16px;
+        }
+
+        .right-section {
+            position: absolute; /*Confirmar que o botão do tema vai ficar na direita em cima rs*/
+            top: 20px;
+            right: 20px; 
+        }
+    </style>
+    <title>Registro</title>
+</head>
+<body>
+
+<div class="register-form">
+    <h2>Registro</h2>
+    <form id="register-form">
+        <label for="username">Usuário:</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="password">Senha:</label>
+        <input type="password" id="password" name="password" required>
+
+        <button type="submit">Registrar</button>
+    </form>
+    <p>Já tem uma conta? <a href="login.html" style="color: white;">Faça Login</a></p>
+</div>
+
+<div class="right-section">
+    <div class="nav">
+        <button id="menu-btn">
+            <span class="material-icons-sharp">
+                menu
+            </span>
+        </button>
+        <div class="dark-mode">
+            <span class="material-icons-sharp active">
+                light_mode
+            </span>
+            <span class="material-icons-sharp">
+                dark_mode
+            </span>
+        </div>
+    </div>
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+<script src="backend/register.js"></script>
+<script src="backend/index.js"></script>
+</body>
+</html>

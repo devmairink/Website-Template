@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .main-text {
+            font-size: 18px; /* Tamanho desejado para o texto principal */
+        }
+    
+        .team-members {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px; /* Adiciona um espaçamento acima dos membros */
+        }
+    
+        .team-member {
+            max-width: 150px; /* Reduz o tamanho máximo das imagens */
+            text-align: center;
+        }
+    
+        .team-member h4 {
+            margin: 0;
+            font-weight: bold !important; /* Adiciona !important para garantir a aplicação do negrito */
+        }
+    </style>    
+    <title>Mairink WebSite Template</title>
+</head>
+<body>
+
+<div class="container">
+    <aside>
+        <div class="toggle">
+            <div class="logo">
+                <img src="images/logo.png" alt="Logo">
+                <h2>Equipe</h2>
+            </div>
+            <div class="close" id="close-btn">
+                <span class="material-icons-sharp">
+                    close
+                </span>
+            </div>
+        </div>
+        <div class="sidebar">
+            <a href="index.html">
+                <span class="material-icons-sharp">
+                    home
+                </span>
+                <h3>Inicio</h3>
+            </a>
+            <a href="equipe.html">
+                <span class="material-icons-sharp">
+                    security
+                </span>
+                <h3>Equipe</h3>
+            </a>
+            <a href="produtos.html">
+                <span class="material-icons-sharp">
+                    inventory_2
+                </span>
+                <h3>Produtos</h3>
+            </a>
+            <a href="#">
+                <span class="material-icons-sharp">
+                    settings
+                </span>
+                <h3>Configurações</h3>
+            </a>
+            <a href="register.html">
+                <span class="material-icons-sharp">
+                    add
+                </span>
+                <h3>Novo Login</h3>
+            </a>
+        </div>
+    </aside>
+    <main>
+        <h1>Conheça Nossa Equipe</h1>
+        <div class="team-members">
+            <div class="team-member">
+                <h2>Arthur Mairink</h2>
+                <p>Cargo: <strong>Eng. Software </strong></p>
+                <p>Biografia: Desenvolvedor fullstack</p>
+            </div>
+
+            <div class="team-member">
+                <h2>Membro 2</h2>
+                <p><strong>?</strong></p>
+                <p>Biografia: ?</p>
+            </div>
+
+            <!-- aqui da pra você ir implementando e adicionando novos membros por exemplo
+            
+                <div class="team-member">
+                <h2>Membro 3</h2>
+                <p>Cargo: ? ou com negrito <strong>?</strong></p>
+                <p>Biografia: ?</p>
+            </div>
+
+            -->
+
+        </div>
+    </main>
+    <div class="right-section">
+        <div class="nav">
+            <button id="menu-btn">
+                <span class="material-icons-sharp">
+                    menu
+                </span>
+            </button>
+            <div class="dark-mode">
+                <span class="material-icons-sharp active">
+                    light_mode
+                </span>
+                <span class="material-icons-sharp">
+                    dark_mode
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Carregue as bibliotecas do Firebase -->
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+
+<script src="backend/index.js"></script>
+</body>
+</html>

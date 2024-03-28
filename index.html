@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .main-text {
+            font-size: 18px; /* Tamanho desejado para o texto principal */
+        }
+
+        .user-info {
+            position: fixed;
+            top: 15px;
+            left: 15px;
+            background-color: var(--color-dark);
+            color: var(--color-white);
+            padding: 10px;
+            border-radius: 5px;
+            display: none;
+        }
+    </style>
+    <title>Mairink WebSite Template</title>
+</head>
+<body>
+
+<div class="container">
+    <aside>
+        <div class="toggle">
+            <div class="logo">
+                <img src="images/logo.png" alt="Logo">
+                <h2>Inicio</h2>
+            </div>
+            <div class="close" id="close-btn">
+                <span class="material-icons-sharp">
+                    close
+                </span>
+            </div>
+        </div>
+        <div class="sidebar">
+            <a href="index.html">
+                <span class="material-icons-sharp">
+                    home
+                </span>
+                <h3>Inicio</h3>
+            </a>
+            <a href="equipe.html">
+                <span class="material-icons-sharp">
+                    security
+                </span>
+                <h3>Equipe</h3>
+            </a>
+            <a href="produtos.html">
+                <span class="material-icons-sharp">
+                    inventory_2
+                </span>
+                <h3>Produtos</h3>
+            </a>
+            <a href="#">
+                <span class="material-icons-sharp">
+                    settings
+                </span>
+                <h3>Configurações</h3>
+            </a>
+            <a href="register.html">
+                <span class="material-icons-sharp">
+                    add
+                </span>
+                <h3>Novo Login</h3>
+            </a>
+            <!-- Adiciona o botão de logout à barra lateral -->
+            <a href="login.html" id="logout-btn-sidebar">
+                <span class="material-icons-sharp">
+                    exit_to_app
+                </span>
+                <h3>Logout</h3>
+            </a>
+        </div>
+    </aside>
+    <main>
+        <!-- Exibe informações do usuário -->
+        <div class="user-info" id="user-info"></div>
+
+        <h1>Bem vindo ao meu primeiro template</h1>
+        <p class="main-text">obrigado por optar usar meu template, fico feliz em poder te ajudar, cheque meu github
+            <a href="https://github.com/devmairink"></p>
+                </span>
+                <h3>Github</h3>
+            </a>
+    </main>
+    <div class="right-section">
+        <div class="nav">
+            <!-- Adicione o botão de menu e Dark Mode aqui -->
+            <button id="menu-btn">
+                <span class="material-icons-sharp">
+                    menu
+                </span>
+            </button>
+            <div class="dark-mode">
+                <span class="material-icons-sharp active">
+                    light_mode
+                </span>
+                <span class="material-icons-sharp">
+                    dark_mode
+                </span>
+            </div>            
+        </div>
+    </div>
+</div>
+
+<!-- Carregue as bibliotecas do Firebase -->
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+
+<script src="backend/index.js"></script>
+</body>
+</html>
